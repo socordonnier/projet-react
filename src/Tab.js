@@ -29,8 +29,7 @@ export default class Example extends React.Component {
             <NavLink
               className={classnames({ active: this.state.activeTab === '1' })}
               onClick={() => { this.toggle('1'); }}
-            >
-Patients            </NavLink>
+            >Patients            </NavLink>
           </NavItem>
           <NavItem>
             <NavLink
@@ -38,6 +37,13 @@ Patients            </NavLink>
               onClick={() => { this.toggle('2'); }}
             >
                 Filtres   </NavLink>
+          </NavItem>
+<NavItem>
+            <NavLink
+              className={classnames({ active: this.state.activeTab === '3' })}
+              onClick={() => { this.toggle('3'); }}
+            >
+                Statistiques   </NavLink>
           </NavItem>
         </Nav>
         <TabContent activeTab={this.state.activeTab}>
@@ -66,6 +72,14 @@ Patients            </NavLink>
               </Col>
             </Row>
           </TabPane>
+<TabPane tabId="3">
+            <Row>
+              <Col sm="12">
+                <h4> Stats </h4>
+              </Col>
+            </Row>
+          </TabPane>
+
         </TabContent>
       </div>
     );

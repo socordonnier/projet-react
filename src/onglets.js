@@ -1,8 +1,7 @@
 import React from 'react';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 //import axios from 'axios'; 
-
-
+//import Table from './tableaupatients';
 
 export default class Example extends React.Component {
   constructor(props) {
@@ -34,7 +33,7 @@ export default class Example extends React.Component {
           
         
           <DropdownItem href = "http://localhost:8000/api/v1/patients?room!=none">Patients en attente</DropdownItem>
-          <DropdownItem href ="http://localhost:8000/api/v1/patients">Tous les patients  </DropdownItem>
+          <DropdownItem href ="http://localhost:8000/api/v1/patients"> <tableaupatient/>  </DropdownItem>
         </DropdownMenu>
       </Dropdown>
     );
